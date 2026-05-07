@@ -54,8 +54,9 @@ export function HeroSection() {
             </div>
 
             <p className="max-w-lg text-base sm:text-lg leading-relaxed text-muted-foreground animate-fade-in-up stagger-2">
-              ICT undergraduate at Uva Wellassa University with hands-on experience in full-stack web development. 
-              Skilled in <span className="text-foreground font-medium">React, Next.js, Spring Boot, Firebase</span>, and cloud technologies. 
+              ICT undergraduate at Uva Wellassa University with hands-on experience in full-stack web development.
+              Skilled in <span className="text-foreground font-medium">React, Next.js, Java, Spring Boot, Firebase, and cloud technologies</span>.
+        
               Building responsive, secure, and scalable web systems.
             </p>
 
@@ -70,7 +71,7 @@ export function HeroSection() {
                 <span className="absolute inset-0 -translate-x-full bg-primary transition-transform duration-500 group-hover:translate-x-0" />
               </a>
               <a
-                href="mailto:nipunshashinthaka@gmail.com"
+                href="#contact"
                 className="group inline-flex items-center justify-center gap-3 rounded-lg border border-border px-7 py-4 sm:py-3.5 font-mono text-sm text-muted-foreground transition-all duration-300 hover:border-foreground hover:text-foreground hover:bg-secondary/50 active:scale-[0.98]"
               >
                 <span>contact me</span>
@@ -95,32 +96,31 @@ export function HeroSection() {
               </div>
 
               <pre className="mt-6 overflow-hidden font-mono text-[10px] leading-relaxed text-primary/80 sm:text-xs md:text-sm">
-                <span className="sm:hidden">{`┌───────────────────────┐
-│  ███████╗███╗   ███╗  │
-│  ██╔════╝████╗ ████║  │
-│  ███████╗██╔████╔██║  │
-│  ╚════██║██║╚██╔╝██║  │
-│  ███████║██║ ╚═╝ ██║  │
-│  ╚══════╝╚═╝     ╚═╝  │
-│                       │
-│  > projects: 4        │
-│  > status: building   │
-└───────────────────────┘`}</span>
-                <span className="hidden sm:block">{`┌─────────────────────────────────────┐
-│                                     │
-│  ███████╗██╗  ██╗ █████╗ ███████╗   │
-│  ██╔════╝██║  ██║██╔══██╗██╔════╝   │
-│  ███████╗███████║███████║███████╗   │
-│  ╚════██║██╔══██║██╔══██║╚════██║   │
-│  ███████║██║  ██║██║  ██║███████║   │
-│  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   │
-│         Shashinthaka                │
-│                                     │
-│   > projects loaded: 4              │
-│   > status: building                │
-│   > location: Sri Lanka             │
-│                                     │
-└─────────────────────────────────────┘`}</span>
+                <span className="sm:hidden">{`┌───────────────────────────┐
+│  ██████╗ ██████╗ ██████╗  │
+│ ██╔════╝██╔═══██╗██╔══██╗ │
+│ ██║     ██║   ██║██║  ██║ │
+│ ██║     ██║   ██║██║  ██║ │
+│ ╚██████╗╚██████╔╝██████╔╝ │
+│  ╚═════╝ ╚═════╝ ╚═════╝  │
+│                           │
+│  > status: building       │
+│  > projects: 4            │
+└───────────────────────────┘`}</span>
+                <span className="hidden sm:block">{`┌──────────────────────────────────────────┐
+│                                          │
+│  ██████╗ ██████╗ ██████╗ ███████╗██████╗ │
+│ ██╔════╝██╔═══██╗██╔══██╗██╔════╝██╔══██╗│
+│ ██║     ██║   ██║██║  ██║█████╗  ██████╔╝│
+│ ██║     ██║   ██║██║  ██║██╔══╝  ██╔══██╗│
+│ ╚██████╗╚██████╔╝██████╔╝███████╗██║  ██║│
+│  ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝│
+│                                          │
+│   > projects loaded: 4                   │
+│   > status: building                     │
+│   > location: Sri Lanka                  │
+│                                          │
+└──────────────────────────────────────────┘`}</span>
               </pre>
             </div>
 

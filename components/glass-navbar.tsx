@@ -28,18 +28,20 @@ export function GlassNavbar() {
       setIsScrolled(window.scrollY > 20)
 
       // Track active section
-      const sections = ["skills", "projects", "contact"]
+      const sections = ["about", "skills", "projects", "contact"]
+      let matched = false
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
           const rect = element.getBoundingClientRect()
-          if (rect.top <= 150 && rect.bottom >= 150) {
+          if (rect.top <= 200 && rect.bottom >= 80) {
             setActiveSection(section)
+            matched = true
             return
           }
         }
       }
-      if (window.scrollY < 200) {
+      if (!matched && window.scrollY < 100) {
         setActiveSection("")
       }
     }
@@ -49,7 +51,10 @@ export function GlassNavbar() {
   }, [])
 
   const handleNavClick = (href: string) => {
-    if (href.startsWith("#")) {
+    if (href === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" })
+      setActiveSection("")
+    } else if (href.startsWith("#")) {
       const element = document.getElementById(href.slice(1))
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "start" })
@@ -89,11 +94,9 @@ export function GlassNavbar() {
                 <div className="absolute inset-0 rounded-xl border border-primary/50 scale-100 opacity-0 group-hover:scale-150 group-hover:opacity-0 transition-all duration-700" />
               </div>
               <div className="hidden sm:block">
-                <span className="font-mono text-sm tracking-tight">
-                  SHASH
-                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-semibold">
-                    INTHAKA
-                  </span>
+                <span className="font-mono text-sm tracking-tight font-semibold">
+                  <span className="text-primary">SHASHIN</span>
+                  <span className="text-foreground">THAKA</span>
                 </span>
                 <p className="text-[10px] text-muted-foreground font-mono tracking-wide">Full Stack Developer</p>
               </div>
@@ -103,7 +106,7 @@ export function GlassNavbar() {
             <div className="hidden md:flex items-center gap-1 bg-secondary/30 rounded-xl px-1.5 py-1.5">
               {navItems.map((item, index) => {
                 const active = isActive(item.href)
-                return item.href.startsWith("#") ? (
+                return (
                   <button
                     key={item.label}
                     onClick={() => handleNavClick(item.href)}
@@ -130,33 +133,6 @@ export function GlassNavbar() {
                     />
                     <span className="relative z-10">{item.label}</span>
                   </button>
-                ) : (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className={cn(
-                      "relative px-4 py-2 font-mono text-xs uppercase tracking-wider transition-all duration-300 rounded-lg",
-                      active
-                        ? "text-primary-foreground"
-                        : "text-muted-foreground hover:text-foreground"
-                    )}
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
-                    data-cursor-hover
-                  >
-                    {/* Active/Hover background */}
-                    <span
-                      className={cn(
-                        "absolute inset-0 rounded-lg transition-all duration-300",
-                        active
-                          ? "bg-primary shadow-lg shadow-primary/25"
-                          : hoveredIndex === index
-                          ? "bg-secondary"
-                          : "bg-transparent"
-                      )}
-                    />
-                    <span className="relative z-10">{item.label}</span>
-                  </Link>
                 )
               })}
             </div>
@@ -224,48 +200,25 @@ export function GlassNavbar() {
           <div className="px-4 pb-4 pt-2 border-t border-border/30">
             <div className="flex flex-col gap-1">
               {navItems.map((item, index) => (
-                item.href.startsWith("#") ? (
-                  <button
-                    key={item.label}
-                    onClick={() => handleNavClick(item.href)}
-                    className={cn(
-                      "flex items-center gap-3 rounded-xl px-4 py-3 font-mono text-sm uppercase tracking-wider transition-all duration-200",
-                      isActive(item.href)
-                        ? "bg-primary text-primary-foreground"
-                        : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                    )}
-                    style={{ animationDelay: `${index * 50}ms` }}
-                  >
-                    <span className={cn(
-                      "text-xs transition-colors",
-                      isActive(item.href) ? "text-primary-foreground/70" : "text-primary"
-                    )}>
-                      0{index + 1}
-                    </span>
-                    {item.label}
-                  </button>
-                ) : (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={cn(
-                      "flex items-center gap-3 rounded-xl px-4 py-3 font-mono text-sm uppercase tracking-wider transition-all duration-200",
-                      isActive(item.href)
-                        ? "bg-primary text-primary-foreground"
-                        : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                    )}
-                    style={{ animationDelay: `${index * 50}ms` }}
-                  >
-                    <span className={cn(
-                      "text-xs transition-colors",
-                      isActive(item.href) ? "text-primary-foreground/70" : "text-primary"
-                    )}>
-                      0{index + 1}
-                    </span>
-                    {item.label}
-                  </Link>
-                )
+                <button
+                  key={item.label}
+                  onClick={() => handleNavClick(item.href)}
+                  className={cn(
+                    "flex items-center gap-3 rounded-xl px-4 py-3 font-mono text-sm uppercase tracking-wider transition-all duration-200",
+                    isActive(item.href)
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                  )}
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  <span className={cn(
+                    "text-xs transition-colors",
+                    isActive(item.href) ? "text-primary-foreground/70" : "text-primary"
+                  )}>
+                    0{index + 1}
+                  </span>
+                  {item.label}
+                </button>
               ))}
             </div>
 

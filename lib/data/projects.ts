@@ -14,7 +14,11 @@ export const projects: Project[] = [
     status: "in-progress",
     year: "2025",
     url: "https://github.com/sandaluruba/CampusAura-backend",
-    homepage: "https://github.com/sandaluruba/CampusAura-frontend",
+    repos: [
+      { label: "backend", url: "https://github.com/sandaluruba/CampusAura-backend" },
+      { label: "frontend", url: "https://github.com/sandaluruba/CampusAura-frontend" },
+    ],
+    homepage: "https://campus-aura-frontend.vercel.app",
     featured: true,
     highlight: true,
   },
@@ -27,6 +31,7 @@ export const projects: Project[] = [
     status: "shipped",
     year: "2025",
     url: "https://github.com/shashinthakamunasinghe/eco-cycle-hub",
+    homepage: "https://eco-cycle-hub.vercel.app",
     featured: true,
   },
   {

@@ -29,6 +29,7 @@ export const techCategories: TechCategory[] = [
     technologies: [
       { name: "MySQL", icon: "🐬", level: 85, description: "Relational database" },
       { name: "PostgreSQL", icon: "🐘", level: 80, description: "Advanced RDBMS" },
+      { name: "Firestore", icon: "🔥", level: 80, description: "NoSQL cloud database" },
     ],
   },
   {
