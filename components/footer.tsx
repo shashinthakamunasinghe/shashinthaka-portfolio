@@ -22,11 +22,9 @@ export function Footer() {
                 <span className="font-bold">SM</span>
               </div>
               <div>
-                <span className="font-mono text-lg tracking-tight block">
-                  SHASH
-                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-semibold">
-                    INTHAKA
-                  </span>
+                <span className="font-mono text-lg tracking-tight block font-semibold">
+                  <span className="text-primary">SHASHIN</span>
+                  <span className="text-foreground">THAKA</span>
                 </span>
                 <span className="text-xs text-muted-foreground">Full Stack Developer</span>
               </div>
@@ -105,36 +103,9 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-border/30">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            {/* Left - Copyright */}
-            <div className="flex items-center gap-3 text-sm text-muted-foreground">
-              <Code2 className="h-4 w-4 text-primary" />
-              <span>Built with</span>
-              <Heart className="h-3.5 w-3.5 text-red-500 animate-pulse" />
-              <span>using Next.js & Tailwind</span>
-            </div>
-
-            {/* Center - Social icons */}
-            <div className="flex items-center gap-2">
-              {socialLinks.slice(0, 3).map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target={link.label !== "Email" ? "_blank" : undefined}
-                  rel={link.label !== "Email" ? "noopener noreferrer" : undefined}
-                  aria-label={link.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground/60 transition-all duration-300 hover:text-primary hover:bg-primary/10"
-                >
-                  <link.icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
-
-            {/* Right - Copyright */}
-            <p className="font-mono text-xs text-muted-foreground">
-              © {new Date().getFullYear()} Shashinthaka Munasinghe
-            </p>
-          </div>
+          <p className="font-mono text-xs text-muted-foreground text-center">
+            © {new Date().getFullYear()} Shashinthaka Munasinghe
+          </p>
         </div>
       </div>
     </footer>

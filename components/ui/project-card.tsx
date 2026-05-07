@@ -75,17 +75,33 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       </div>
 
       {/* Links */}
-      <div className="flex items-center gap-4">
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-primary transition-all duration-300 group/link"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <Github className="h-4 w-4 transition-transform group-hover/link:scale-110" />
-          <span className="underline-animate">source</span>
-        </a>
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+        {project.repos && project.repos.length > 0 ? (
+          project.repos.map((repo) => (
+            <a
+              key={repo.url}
+              href={repo.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-primary transition-all duration-300 group/link"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Github className="h-4 w-4 transition-transform group-hover/link:scale-110" />
+              <span className="underline-animate">{repo.label}</span>
+            </a>
+          ))
+        ) : (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-primary transition-all duration-300 group/link"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Github className="h-4 w-4 transition-transform group-hover/link:scale-110" />
+            <span className="underline-animate">source</span>
+          </a>
+        )}
         {project.homepage && (
           <a
             href={project.homepage}
@@ -95,9 +111,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             onClick={(e) => e.stopPropagation()}
           >
             <ExternalLink className="h-4 w-4 transition-transform group-hover/link:scale-110 group-hover/link:rotate-12" />
-            <span className="underline-animate">
-              {project.id === 0 ? "frontend" : "live"}
-            </span>
+            <span className="underline-animate">live demo</span>
           </a>
         )}
       </div>

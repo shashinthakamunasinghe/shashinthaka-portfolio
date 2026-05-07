@@ -19,8 +19,8 @@ export const socialLinks: SocialLink[] = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/shashinthaka-munasinghe",
-    handle: "/in/shashinthaka-munasinghe",
+    href: "https://www.linkedin.com/in/shashinthaka-munasinghe-2b366a366/",
+    handle: "/in/shashinthaka-munasinghe-2b366a366",
     icon: Linkedin,
   },
   {

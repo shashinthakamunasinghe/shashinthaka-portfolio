@@ -34,24 +34,31 @@ export function AboutSection() {
           {/* Left column - Profile card */}
           <div className="lg:col-span-2 animate-fade-in-up">
             <div className="sticky top-32 space-y-6">
-              {/* Profile image placeholder */}
+              {/* Profile image */}
               <div className="relative group">
-                <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 via-primary/10 to-accent/20 border border-border/50 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center space-y-4">
-                      <div className="w-24 h-24 mx-auto rounded-full bg-primary/20 flex items-center justify-center border-2 border-primary/30">
-                        <span className="text-4xl font-bold text-primary">SM</span>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-lg">{personalInfo.name}</h3>
-                        <p className="text-sm text-muted-foreground">{personalInfo.title}</p>
-                      </div>
-                    </div>
+                <div className="relative aspect-square rounded-2xl border border-border/50 overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
+                  <img
+                    src="/profile.jpg"
+                    alt="Shashinthaka Munasinghe"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Hover gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* Available badge — top-right inside image */}
+                  <div className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 backdrop-blur-md">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                    </span>
+                    <span className="font-mono text-[10px] text-emerald-400 font-medium">Available</span>
                   </div>
-                  {/* Hover glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* Name overlay — bottom-left, slides up on hover */}
+                  <div className="absolute bottom-0 left-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    <p className="font-semibold text-white text-sm drop-shadow">{personalInfo.name}</p>
+                    <p className="text-xs text-emerald-400 drop-shadow">{personalInfo.title}</p>
+                  </div>
                 </div>
-                {/* Decorative elements */}
+                {/* Corner decorations */}
                 <div className="absolute -top-2 -right-2 w-12 h-12 border-t-2 border-r-2 border-primary/30 rounded-tr-xl" />
                 <div className="absolute -bottom-2 -left-2 w-12 h-12 border-b-2 border-l-2 border-primary/30 rounded-bl-xl" />
               </div>

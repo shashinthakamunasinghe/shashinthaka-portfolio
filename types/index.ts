@@ -19,6 +19,11 @@ export interface SocialLink {
 
 export type ProjectStatus = "shipped" | "in-progress" | "archived"
 
+export interface ProjectRepo {
+  label: string
+  url: string
+}
+
 export interface Project {
   id: number
   title: string
@@ -27,6 +32,8 @@ export interface Project {
   status: ProjectStatus
   year: string
   url: string
+  /** Multiple repos (e.g. separate frontend & backend) — overrides `url` when present */
+  repos?: ProjectRepo[]
   homepage?: string
   featured: boolean
   highlight?: boolean
