@@ -216,7 +216,7 @@ This project is open source under the [MIT License](LICENSE).
 
 **Shashinthaka Munasinghe**
 
-- 🌐 Website: [shashinthaka.dev](https://shashinthaka.dev)
+- 🌐 Website: [shashinthakamunasinghe.dev](https://shashinthakamunasinghe.me)
 - 📧 Email: [nipunshashinthaka@gmail.com](mailto:nipunshashinthaka@gmail.com)
 - 💼 LinkedIn: [linkedin.com/in/shashinthaka-munasinghe](https://linkedin.com/in/shashinthaka-munasinghe)
 - 🐙 GitHub: [github.com/shashinthakamunasinghe](https://github.com/shashinthakamunasinghe)
