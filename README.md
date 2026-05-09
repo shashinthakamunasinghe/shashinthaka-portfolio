@@ -139,7 +139,7 @@ Create a `.env.local` file in the root of the project:
 
 ```env
 # Base URL for SEO metadata and Open Graph (no trailing slash)
-NEXT_PUBLIC_SITE_URL=https://shashinthaka.dev
+NEXT_PUBLIC_SITE_URL=https://shashinthakamunasinghe.me
 ```
 
 | Variable | Description | Required |
@@ -216,7 +216,7 @@ This project is open source under the [MIT License](LICENSE).
 
 **Shashinthaka Munasinghe**
 
-- 🌐 Website: [shashinthakamunasinghe.dev](https://shashinthakamunasinghe.me)
+- 🌐 Website: [shashinthakamunasinghe.me](https://shashinthakamunasinghe.me)
 - 📧 Email: [nipunshashinthaka@gmail.com](mailto:nipunshashinthaka@gmail.com)
 - 💼 LinkedIn: [linkedin.com/in/shashinthaka-munasinghe](https://linkedin.com/in/shashinthaka-munasinghe)
 - 🐙 GitHub: [github.com/shashinthakamunasinghe](https://github.com/shashinthakamunasinghe)
