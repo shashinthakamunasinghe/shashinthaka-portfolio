@@ -10,7 +10,7 @@
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-[**Live Demo →**](https://shashinthaka.dev) &nbsp;·&nbsp; [GitHub](https://github.com/shashinthakamunasinghe) &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/shashinthaka-munasinghe)
+[**Live Demo →**](https://www.shashinthakamunasinghe.me) &nbsp;·&nbsp; [GitHub](https://github.com/shashinthakamunasinghe) &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/shashinthaka-munasinghe)
 
 </div>
 
